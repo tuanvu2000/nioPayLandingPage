@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>nioPay - Landing Page</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+            rel="stylesheet"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    colors: {
+                        black: '#1E1E1E',
+                        white: '#FFFFFF'
+                    },
+                    extend: {
+                        fontFamily: {
+                            // sans: ['Manrope', 'Poppins', 'Inter', 'sans-serfi'],
+                            sans: ['Inter', 'sans-serfi'],
+                            header: ['Syne', 'sans-serfi']
+                        },
+                        fontSize: {
+                            logo: ['2.75rem', 1],
+                            '2xl-5': ['1.5rem', '2.25rem'],
+                            '2xl-15': ['1.5rem', '4.5rem'],
+                            '3xl-1': ['2rem', 1],
+                            '3xl-5': ['2rem', '3rem'],
+                            '7xl-5': ['5.25rem', 1]
+                        },
+                        colors: {
+                            black: '#1E1E1E',
+                            primary: '#623FF0',
+                            secondary: '#FDB242',
+                            secondary2: '#E74EF4',
+                            secondary3: '#FF2C78',
+                            'primary-light': '#999DFD',
+                            'secondary-light': '#FFF389',
+                            'secondary2-light': '#EE87F7',
+                            'secondary3-light': '#FF80AE',
+                            success: '#4BDB4B',
+                            error: '#FF4D4D',
+                            'icon-1': '#623FF0',
+                            'icon-2': '#E74EF4',
+                            'icon-3': '#639AFF',
+                            'icon-4': '#4BDB4B',
+                            'icon-5': '#B643EC',
+                            'icon-6': '#F8BA43'
+                        },
+                        borderRadius: {
+                            '4xl': '2rem'
+                        },
+                        boxShadow: {
+                            custom: '0px 4px 8px rgba(30, 30, 30, 0.1)'
+                        },
+                        minWidth: {
+                            40: '40px'
+                        },
+                        width: {
+                            21: '5.25rem'
+                        },
+                        height: {
+                            18: '4.5rem',
+                            21: '5.25rem'
+                        },
+                        maxHeight: {
+                            18: '4.5rem'
+                        },
+                        lineHeight: {
+                            0.5: '0.125rem',
+                            18: '4.5rem'
+                        },
+                        gap: {
+                            21: '5.25rem'
+                        }
+                    },
+                    screens: {
+                        '2xl': { max: '1535px' },
+                        xl: { max: '1279px' },
+                        lg: { max: '1023px' },
+                        md: { max: '767px' },
+                        sm: { max: '639px' }
+                    }
+                }
+            };
+        </script>
+
+        <style>
+            * {
+                box-sizing: border-box;
+                /* font-family: "Syne", sans-serif; */
+                /* font-family: "Inter", sans-serif; */
+                color: '#1E1E1E';
+                line-height: 1.5;
+                font-size: 16px;
+                font-weight: normal;
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+            .material-icons.md-18 {
+                font-size: 18px;
+            }
+            .material-icons.md-24 {
+                font-size: 24px;
+            } /* Default */
+            .material-icons.md-36 {
+                font-size: 36px;
+            }
+            .material-icons.md-48 {
+                font-size: 48px;
+            }
+            #fill-text {
+                background: url(https://res.cloudinary.com/dwf04fosc/image/upload/v1668162943/nioPay/fill-text_zp0azc.png);
+                background-size: cover;
+                background-position: center;
+                color: transparent;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                padding: 0;
+            }
+            #information {
+                max-width: 1000px;
+                width: 100%;
+            }
+            #table-coin {
+                position: relative;
+                background-clip: padding-box;
+                border: 1px solid transparent;
+                background-color: #fff;
+                border-radius: 32px;
+            }
+            #table-coin:before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                z-index: -1;
+                margin: -1px;
+                background-image: linear-gradient(102.46deg, #fdb242 -3.27%, #e74ef4 52.66%, #623ff0 105.2%);
+                border-radius: inherit;
+            }
+            #table-coin table {
+                max-width: 1000px;
+                width: 100%;
+            }
+            .icon__right {
+                width: 24px;
+                line-height: 24px;
+                text-align: center;
+                font-size: 18px;
+                font-weight: 700;
+                color: rgba(30, 30, 30, 0.25);
+                background-color: rgba(30, 30, 30, 0.05);
+                border-radius: 4px;
+            }
+            #rectangle-frame-2 {
+                position: absolute;
+                left: 0;
+                bottom: 100%;
+                max-width: 600px;
+                width: 100%;
+                height: 72px;
+                background-color: inherit;
+            }
+            #rectangle-frame-2:before {
+                content: '';
+                position: absolute;
+                right: 0;
+                border-right: 136px solid white;
+                border-bottom: 72px solid transparent;
+            }
+            .left__custom {
+                left: calc(100% - 50px);
+            }
+            .right__custom {
+                right: calc(100% - 30px);
+            }
+            .frame-6__background {
+                background: linear-gradient(111.41deg, #623ff0 -0.63%, #e74ef4 52.21%, #fdb242 107.9%);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container" class="container mx-auto w-full">
+            <!-- HEADER -->
+            <div id="header" class="flex justify-between items-center py-4 px-32 bg-white xl:px-28 lg:px-12 md:px-6 sm:px-4">
+                <div id="logo" class="flex items-center">
+                    <img
+                        src="https://res.cloudinary.com/dwf04fosc/image/upload/v1668152434/nioPay/logo_y0mnpy.png"
+                        alt="logo-icon"
+                        class="logo__img block w-15 h-15 object-cover lg:w-12 lg:h-12 sm:w-10 sm:h-10"
+                    />
+                    <span class="logo__text block text-black font-header font-bold text-logo lg:text-4xl sm:text-[28px]">nioPay</span>
+                </div>
+
+                <ul id="nav" class="flex md:hidden">
+                    <li class="nav__item">
+                        <a href="" class="nav__link inline-block leading-6 font-semibold text-black mr-6 lg:mr-4">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="api.html" class="nav__link inline-block leading-6 font-semibold text-black/50 mr-6 lg:mr-4">APIs</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="api.html" class="nav__link inline-block leading-6 font-semibold text-black/50 mr-6 lg:mr-4">Fees</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link inline-block leading-6 font-semibold text-black/50 mr-6 lg:mr-4">Plugins & Coins</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="blog.html" class="nav__link inline-block leading-6 font-semibold text-black/50 mr-6 lg:mr-4">Blogs</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#footer" class="nav__link inline-block leading-6 font-semibold text-black/50">Contact</a>
+                    </li>
+                </ul>
+
+                <div id="toggle" class="hidden md:inline-block">
+                    <span
+                        class="material-icons-outlined md:inline-block text-3xl px-2 hover:bg-primary-light hover:text-black/50 rounded-lg transition duration-200 ease-in-out"
+                        onClick="openNav()"
+                        >menu</span
+                    >
+                </div>
+            </div>
+            <nav
+                id="sidebar"
+                class="hidden md:block fixed inset-0 z-50 bg-white overflow-hidden transition-all duration-500 md:ml-[767px] md:opacity-0"
+            >
+                <div class="flex justify-between p-4 border-b border-black/10">
+                    <div id="logo" class="flex items-center">
+                        <img
+                            src="https://res.cloudinary.com/dwf04fosc/image/upload/v1668152434/nioPay/logo_y0mnpy.png"
+                            alt="logo-icon"
+                            class="logo__img block object-cover w-12 h-12 sm:w-10 sm:h-10"
+                        />
+                        <span class="logo__text block text-black font-header font-bold text-4xl sm:text-[28px]">nioPay</span>
+                    </div>
+                    <span
+                        onClick="closeNav()"
+                        class="material-icons-outlined text-3xl px-2 hover:bg-primary-light hover:text-black/50 rounded-lg transition duration-200 ease-in-out"
+                        >close</span
+                    >
+                </div>
+                <ul class="">
+                    <li>
+                        <a href="" onClick="closeNav()" class="block text-lg text-black font-medium py-2 px-8 hover:bg-primary-light/75">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="api.html"
+                            onClick="closeNav()"
+                            class="block text-lg text-black font-medium py-2 px-8 hover:bg-primary-light/75"
+                        >
+                            APIs
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="api.html"
+                            onClick="closeNav()"
+                            class="block text-lg text-black font-medium py-2 px-8 hover:bg-primary-light/75"
+                        >
+                            Fee
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" onClick="closeNav()" class="block text-lg text-black font-medium py-2 px-8 hover:bg-primary-light/75">
+                            Plugins & Coins
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="blog.html"
+                            onClick="closeNav()"
+                            class="block text-lg text-black font-medium py-2 px-8 hover:bg-primary-light/75"
+                        >
+                            Blogs
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#footer"
+                            onClick="closeNav()"
+                            class="block text-lg text-black font-medium py-2 px-8 hover:bg-primary-light/75"
+                        >
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- FRAME 1 -->
+            <div
+                id="home"
+                class="relative w-full bg-transparent mb-64 px-32 xl:px-28 xl:mb-48 lg:px-12 lg:mb-36 md:px-6 sm:px-4 sm:mb-28 sm:overflow-hidden"
+            >
+                <div class="bg-grid absolute top-0 left-0 right-0 z-10 flex justify-center -z-10 sm:w-[700px]">
+                    <img
+                        src="https://res.cloudinary.com/dwf04fosc/image/upload/v1668158001/nioPay/background-1_hfpwjv.svg"
+                        alt="background-grid"
+                        class="block w-auto h-auto object-cover"
+                    />
+                </div>
+                <div id="information" class="text-center mx-auto pt-16">
+                    <div id="fill-text">
+                        <h2 class="font-header font-semibold capitalize text-[124px] leading-[1.1] xl:text-8xl lg:text-6xl sm:text-[40px]">
+                            Receive crypto payments easy
+                        </h2>
+                    </div>
+                    <p class="text-3xl leading-normal font-medium text-black/75 mt-6 xl:text-[28px] lg:text-[25px] sm:text-xl">
+                        Get a reliable crypto payment gateway for your business.
+                        <br />
+                        Receive crypto payments for your website by using niopay
+                    </p>
+                </div>
+                <div id="table-coin" class="bg-white mt-16 p-8 md:p-6 sm:p-4">
+                    <table class="table-auto mx-auto sm:table-fixed">
+                        <thead>
+                            <tr>
+                                <th class="text-xl text-black font-semibold leading-normal capitalize text-left min-w-40 h-11 md:hidden">
+                                    #
+                                </th>
+                                <th class="text-xl text-black font-semibold leading-normal capitalize text-left min-w-40 h-11 sm:text-base">
+                                    Coin
+                                </th>
+                                <th class="text-xl text-black font-semibold leading-normal capitalize text-left min-w-40 h-11 sm:text-base">
+                                    Price
+                                </th>
+                                <th class="text-xl text-black font-semibold leading-normal capitalize text-left min-w-40 h-11 sm:text-base">
+                                    24h Change
+                                </th>
+                                <th class="text-xl text-black font-semibold leading-normal capitalize text-left min-w-40 h-11 sm:hidden">
+                                    Chart
+                                </th>
+                                <th
+                                    class="text-xl text-black font-semibold leading-normal capitalize text-left min-w-40 h-11 lg:hidden"
+                                ></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-black/75 font-semibold leading-normal h-11 md:hidden">1</td>
+                                <td class="h-11 flex items-center justify-start">
+                                    <img
+                                        src="https://res.cloudinary.com/dwf04fosc/image/upload/v1668158747/nioPay/BTC_psphc2.png"
+                                        alt="bitcoin"
+                                        class="w-6 h-6 object-cover inline-block mr-3"
+                                    />
+                                    <span class="text-black/75 font-semibold leading-normal sm:text-sm">
+                                        <span class="font-semibold md:hidden">Bitcoin - </span>
+                                        BTC
+                                    </span>
+                                </td>
+                                <td class="text-black/75 font-semibold leading-normal h-11 sm:text-sm">$29,636.60</td>
+                                <td class="text-black/75 font-semibold leading-normal h-11 text-error sm:text-sm">- 3.759%</td>
+                                <td class="h-11 flex items-center justify-start sm:hidden">
+                                    <img
+                                        src="https://res.cloudinary.com/dwf04fosc/image/upload/v1668158748/nioPay/chart-2_vf2ag3.png"
+                                        alt="chart 1"
+                                        class="h-7 object-contain inline-block mr-5"
+                                    />
+                                    <span class="text-black/50 font-semibold leading-normal lg:hidden">24H</span>
+                                </td>
+                                <td class="text-black/75 font-semibold leading-normal h-11 lg:hidden">
+                                    <span class="material-icons-outlined icon__right">chevron_right</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-black/75 font-semibold leading-normal h-11 md:hidden">2</td>
+                                <td class="h-11 flex items-center justify-start">
+                                    <img
+                                        src="https://res.cloudinary.com/dwf04fosc/image/upload/v1668158748/nioPay/ETH_wlzad9.png"
+                                        alt="bitcoin"
+                                        class="w-6 h-6 object-cover inline-block mr-3"
+                                    />
+                                    <span class="text-black/75 font-semibold leading-normal sm:text-sm">
+                                        <span class="font-semibold md:hidden">Ethereum -</span>
+                                        ETH
+                                    </span>
+                                </td>
+                                <td class="text-black/75 font-semibold leading-normal h-11 sm:text-sm">$1,200.45</td>
+                                <td class="text-black/75 font-semibold leading-normal h-11 text-success sm:text-sm">+ 3.5%</td>
+                                <td class="h-11 flex items-center justify-start sm:hidden">
+                                    <img
+                                        src="https://res.cloudinary.com/dwf04fosc/image/upload/v1668158748/nioPay/chart-1_hvcwze.png"
+                                        alt="chart 1"
+                                        class="h-7 object-contain inline-block mr-5"
+                                    />
+                                    <span class="text-black/50 font-semibold leading-normal lg:hidden">24H</span>
+                                </td>
+                                <td class="text-black/75 font-semibold leading-normal h-11 lg:hidden">
+                                    <span class="material-icons-outlined icon__right">chevron_right</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-black/75 font-semibold leading-normal h-11 md:hidden">3</td>
+                                <td class="h-11 flex items-center justify-start">
+                                    <img
+                                        src="https://res.cloudinary.com/dwf04fosc/image/upload/v1668158747/nioPay/BNB_nuuun6.png"
+                                        alt="bitcoin"
+                                        class="w-6 h-6 object-cover inline-block mr-3"
+                                    />
+                                    <span class="text-black/75 font-semibold leading-normal sm:text-sm">
+                                        <span class="font-semibold md:hidden">Binance - </span>
+                                        BNB
+                                    </span>
+                                </td>
+                                <td class="text-black/75 font-semibold leading-normal h-11 sm:text-sm">$375.55</td>
+                                <td class="text-black/75 font-semibold leading-normal h-11 text-success sm:text-sm">+ 3.5%</td>
+                                <td class="h-11 flex items-center justify-start sm:hidden">
+                                    <img
+                                        src="https://res.cloudinary.com/dwf04fosc/image/upload/v1668158748/nioPay/chart-1_hvcwze.png"
+                                        alt="chart 1"
+                                        class="h-7 object-contain inline-block mr-5"
+                                    />
+                                    <span class="text-black/50 font-semibold leading-normal lg:hidden">24H</span>
+                                </td>
+                                <td class="text-black/75 font-semibold leading-normal h-11 lg:hidden">
+                                    <span class="material-icons-outlined icon__right">chevron_right</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-black/75 font-semibold leading-normal h-11 md:hidden">4</td>
+                                <td class="h-11 flex items-center justify-start">
+                                    <img
+                                        src="https://res.cloudinary.com/dwf04fosc/image/upload/v1668158747/nioPay/BCH_wzrk5q.png"
+                                        alt="bitcoin"
+                                        class="w-6 h-6 object-cover inline-block mr-3"
+                                    />
+                                    <span class="text-black/75 font-semibold leading-normal sm:text-sm">
+                                        <span class="font-semibold md:hidden">Bitcoin Dash - </span>
+                                        BCH
+                                    </span>
+                                </td>
+                                <td class="text-black/75 font-semibold leading-normal h-11 sm:text-sm">$192.10</td>
+                                <td class="text-black/75 font-semibold leading-normal h-11 text-error sm:text-sm">- 3.5%</td>
+                                <td class="h-11 flex items-center justify-start sm:hidden">
+                                    <img
+                                        src="https://res.cloudinary.com/dwf04fosc/image/upload/v1668158748/nioPay/chart-2_vf2ag3.png"
+                                        alt="chart 1"
+                                        class="h-7 object-contain inline-block mr-5"
+                                    />
+                                    <span class="text-black/50 font-semibold leading-normal lg:hidden">24H</span>
+                                </td>
+                                <td class="text-black/75 font-semibold leading-normal h-11 lg:hidden">
+                                    <span class="material-icons-outlined icon__right">chevron_right</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-black/75 font-semibold leading-normal h-11 md:hidden">5</td>
+                                <td class="h-11 flex items-center justify-start">
+                                    <img
+                                        src="https://res.cloudinary.com/dwf04fosc/image/upload/v1668158747/nioPay/LTC_wyi4ib.png"
+                                        alt="bitcoin"
+                                        class="w-6 h-6 object-cover inline-block mr-3"
+                                    />
+                                    <span class="text-black/75 font-semibold leading-normal sm:text-sm">
+                                        <span class="font-semibold md:hidden">Litecoin - </span>
+                                        LTC
+                                    </span>
+                                </td>
+                                <td class="text-black/75 font-semibold leading-normal h-11 sm:text-sm">$69.40</td>
+                                <td class="text-black/75 font-semibold leading-normal h-11 text-success sm:text-sm">+ 3.5%</td>
+                                <td class="h-11 flex items-center justify-start sm:hidden">
+                                    <img
+                                        src="https://res.cloudinary.com/dwf04fosc/image/upload/v1668158748/nioPay/chart-1_hvcwze.png"
+                                        alt="chart 1"
+                                        class="h-7 object-contain inline-block mr-5"
+                                    />
+                                    <span class="text-black/50 font-semibold leading-normal lg:hidden">24H</span>
+                                </td>
+                                <td class="text-black/75 font-semibold leading-normal h-11 lg:hidden">
+                                    <span class="material-icons-outlined icon__right">chevron_right</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-black/75 font-semibold leading-normal h-11 md:hidden">6</td>
+                                <td class="h-11 flex items-center justify-start">
+                                    <img
+                                        src="https://res.cloudinary.com/dwf04fosc/image/upload/v1668158747/nioPay/USDT_n44yh4.png"
+                                        alt="bitcoin"
+                                        class="w-6 h-6 object-cover inline-block mr-3"
+                                    />
+                                    <span class="text-black/75 font-semibold leading-normal sm:text-sm">
+                                        <span class="font-semibold md:hidden">Tether - </span>
+                                        USDT
+                                    </span>
+                                </td>
+                                <td class="text-black/75 font-semibold leading-normal h-11 sm:text-sm">$1.00</td>
+                                <td class="text-black/75 font-semibold leading-normal h-11 text-error sm:text-sm">- 3.5%</td>
+                                <td class="h-11 flex items-center justify-start sm:hidden">
+                                    <img
+                                        src="https://res.cloudinary.com/dwf04fosc/image/upload/v1668158748/nioPay/chart-2_vf2ag3.png"
+                                        alt="chart 1"
+                                        class="h-7 object-contain inline-block mr-5"
+                                    />
+                                    <span class="text-black/50 font-semibold leading-normal lg:hidden">24H</span>
+                                </td>
+                                <td class="text-black/75 font-semibold leading-normal h-11 lg:hidden">
+                                    <span class="material-icons-outlined icon__right">chevron_right</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-black/75 font-semibold leading-normal h-11 md:hidden">7</td>
+                                <td class="h-11 flex items-center justify-start">
+                                    <img
+                                        src="https://res.cloudinary.com/dwf04fosc/image/upload/v1668158747/nioPay/DOGE_javssy.png"
+                                        alt="bitcoin"
+                                        class="w-6 h-6 object-cover inline-block mr-3"
+                                    />
+                                    <span class="text-black/75 font-semibold leading-normal sm:text-sm">
+                                        <span class="font-semibold md:hidden">Doge Coin - </span>
+                                        DOGE
+                                    </span>
+                                </td>
+                                <td class="text-black/75 font-semibold leading-normal h-11 sm:text-sm">$0.08</td>
+                                <td class="text-black/75 font-semibold leading-normal h-11 text-error sm:text-sm">- 3.5%</td>
+                                <td class="h-11 flex items-center justify-start sm:hidden">
+                                    <img
+                                        src="https://res.cloudinary.com/dwf04fosc/image/upload/v1668158748/nioPay/chart-2_vf2ag3.png"
+                                        alt="chart 1"
+                                        class="h-7 object-contain inline-block mr-5"
+                                    />
+                                    <span class="text-black/50 font-semibold leading-normal lg:hidden">24H</span>
+                                </td>
+                                <td class="text-black/75 font-semibold leading-normal h-11 lg:hidden">
+                                    <span class="material-icons-outlined icon__right">chevron_right</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-black/75 font-semibold leading-normal h-11 md:hidden">8</td>
+                                <td class="h-11 flex items-center justify-start">
+                                    <img
+                                        src="https://res.cloudinary.com/dwf04fosc/image/upload/v1668158747/nioPay/DASH_xtfmzn.png"
+                                        alt="bitcoin"
+                                        class="w-6 h-6 object-cover inline-block mr-3"
+                                    />
+                                    <span class="text-black/75 font-semibold leading-normal sm:text-sm">
+                                        <span class="font-semibold md:hidden">Dash Coin - </span>
+                                        DASH
+                                    </span>
+                                </td>
+                                <td class="text-black/75 font-semibold leading-normal h-11 sm:text-sm">$375.55</td>
+                                <td class="text-black/75 font-semibold leading-normal h-11 text-success sm:text-sm">+ 3.5%</td>
+                                <td class="h-11 flex items-center justify-start sm:hidden">
+                                    <img
+                                        src="https://res.cloudinary.com/dwf04fosc/image/upload/v1668158748/nioPay/chart-1_hvcwze.png"
+                                        alt="chart 1"
+                                        class="h-7 object-contain inline-block mr-5"
+                                    />
+                                    <span class="text-black/50 font-semibold leading-normal lg:hidden">24H</span>
+                                </td>
+                                <td class="text-black/75 font-semibold leading-normal h-11 lg:hidden sm:max-lg:hidden">
+                                    <span class="material-icons-outlined icon__right">chevron_right</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="our-services" class="mt-28 lg:mt-20 md:mt-16 sm:mt-12">
+                    <div class="title text-center mb-20 lg:mb-12 sm:mb-10">
+                        <h2 class="mb-6">
+                            <span class="text-black/50 text-7xl font-semibold xl:text-6xl lg:text-5xl sm:text-4xl">Our</span>
+                            <span class="mx-2 lg:mx-0.5"></span>
+                            <span class="text-black text-7xl font-semibold xl:text-6xl lg:text-5xl sm:text-4xl">Services</span>
+                        </h2>
+                        <p class="text-black/50 text-2xl font-semibold leading-normal lg:text-xl">
+                            Provide your business with the best tools to accept online payments <br />And offer the greatest client
+                            experience.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-3 gap-6 md:grid-cols-1">
+                        <div class="py-8 px-4 shadow-custom rounded-4xl">
+                            <span class="material-icons-outlined text-7xl-5 text-icon-1 mb-8 xl:text-6xl md:text-5xl xl:mb-6">widgets</span>
+                            <h3 class="text-3xl-5 font-semibold mb-6 xl:text-[28px] md:leading-none sm:text-[24px] xl:mb-4">APIs</h3>
+                            <p class="text-2xl-5 xl:text-2xl sm:text-xl">
+                                We provides a testing environment, API documentation, and Sample Code. Suitable for all inquiries from our
+                                valuable clients.
+                            </p>
+                        </div>
+                        <div class="py-8 px-4 shadow-custom rounded-4xl">
+                            <span class="material-icons-outlined text-7xl-5 text-icon-2 mb-8 xl:text-6xl md:text-5xl xl:mb-6"
+                                >download</span
+                            >
+                            <h3 class="text-3xl-5 font-semibold mb-6 xl:text-[28px] md:leading-none sm:text-[24px] xl:mb-4">Lower Fees</h3>
+                            <p class="text-2xl-5 xl:text-2xl sm:text-xl">
+                                niopay has the lowest fee in the market, which is 0.15% of the withdrawal amount.
+                            </p>
+                        </div>
+                        <div class="py-8 px-4 shadow-custom rounded-4xl">
+                            <span class="material-icons-outlined text-7xl-5 text-icon-3 mb-8 xl:text-6xl md:text-5xl xl:mb-6"
+                                >settings_input_svideo</span
+                            >
+                            <h3 class="text-3xl-5 font-semibold mb-6 xl:text-[28px] md:leading-none sm:text-[24px] xl:mb-4">
+                                Open-Source Plugins
+                            </h3>
+                            <p class="text-2xl-5 xl:text-2xl sm:text-xl">
+                                niopay offers open-source plugins for facilitating cryptocurrency payments on some of the most prominent
+                                eCommerce platforms.
+                            </p>
+                        </div>
+                        <div class="py-8 px-4 shadow-custom rounded-4xl">
+                            <span class="material-icons-outlined text-7xl-5 text-icon-4 mb-8 xl:text-6xl md:text-5xl xl:mb-6"
+                                >local_gas_station</span
+                            >
+                            <h3 class="text-3xl-5 font-semibold mb-6 xl:text-[28px] md:leading-none sm:text-[24px] xl:mb-4">Gas Station</h3>
+                            <p class="text-2xl-5 xl:text-2xl sm:text-xl">
+                                Pro users of niopay are able to get access to the Gas Station, paying some of the gas expenses on behalf of
+                                merchants.
+                            </p>
+                        </div>
+                        <div class="py-8 px-4 shadow-custom rounded-4xl">
+                            <span class="material-icons-outlined text-7xl-5 text-icon-5 mb-8 xl:text-6xl md:text-5xl xl:mb-6"
+                                >monetization_on</span
+                            >
+                            <h3 class="text-3xl-5 font-semibold mb-6 xl:text-[28px] md:leading-none sm:text-[24px] xl:mb-4">
+                                List Your Coin
+                            </h3>
+                            <p class="text-2xl-5 xl:text-2xl sm:text-xl">
+                                niopay also provides coin listing services. Merchants and users are able to apply for coin and token listing
+                                on niopay.
+                            </p>
+                        </div>
+                        <div class="py-8 px-4 shadow-custom rounded-4xl">
+                            <span class="material-icons-outlined text-7xl-5 text-icon-6 mb-8 xl:text-6xl md:text-5xl xl:mb-6"
+                                >beenhere</span
+                            >
+                            <h3 class="text-3xl-5 font-semibold mb-6 xl:text-[28px] md:leading-none sm:text-[24px] xl:mb-4">
+                                Defense Grade Security
+                            </h3>
+                            <p class="text-2xl-5 xl:text-2xl sm:text-xl">
+                                niopay applies security features like 2FA and the code card which add a security layer to merchants and
+                                users’ accounts.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FRAME 2 -->
+            <div id="api" class="bg-black text-white px-32 relative xl:px-28 lg:px-12 md:px-6 sm:px-4">
+                <div id="rectangle-frame-2"></div>
+                <div class="grid grid-cols-3 gap-x-3 py-24 md:grid-cols-2 lg:gap-x-4 sm:grid-cols-1 lg:py-16 md:py-12 sm:py-8">
+                    <div class="grid gap-y-5 sm:order-last sm:gap-y-3">
+                        <div class="bg-white/[.075] p-4 flex items-center rounded-xl sm:p-3">
+                            <span class="material-icons-outlined text-3xl-1 mr-4 md:text-[28px]">dashboard</span>
+                            <span class="text-2xl-5 font-medium flex-1 flex items-center max-h-18 h-18 lg:text-xl sm:h-10"
+                                >Backtest your strategies</span
+                            >
+                        </div>
+                        <div class="bg-white/[.075] p-4 flex items-center rounded-xl sm:p-3">
+                            <span class="material-icons-outlined text-3xl-1 mr-4 md:text-[28px]">signal_cellular_alt</span>
+                            <span class="text-2xl-5 font-medium flex-1 flex items-center max-h-18 h-18 lg:text-xl sm:h-10"
+                                >Chart the right data</span
+                            >
+                        </div>
+                        <div class="bg-white/[.075] p-4 flex items-center rounded-xl sm:p-3">
+                            <span class="material-icons-outlined text-3xl-1 mr-4 md:text-[28px]">wifi_tethering</span>
+                            <span class="text-2xl-5 font-medium flex-1 flex items-center max-h-18 h-18 lg:text-xl sm:h-10"
+                                >Beat the competition</span
+                            >
+                        </div>
+                        <div class="bg-white/[.075] p-4 flex items-center rounded-xl sm:p-3">
+                            <span class="material-icons-outlined text-3xl-1 mr-4 md:text-[28px]">download</span>
+                            <span class="text-2xl-5 font-medium flex-1 flex items-center max-h-18 h-18 lg:text-xl sm:h-10"
+                                >Run experiments</span
+                            >
+                        </div>
+                    </div>
+                    <div class="col-span-2 text-right ml-20 lg:ml-12 md:ml-0 md:col-span-1 sm:text-center sm:mb-8">
+                        <h2 class="">
+                            <span class="text-7xl font-extrabold xl:text-6xl lg:text-5xl sm:text-4xl">Provided</span>
+                            <span class="mx-2 lg:mx-0.5"></span>
+                            <span class="text-secondary3 text-7xl font-extrabold xl:text-6xl lg:text-5xl sm:text-4xl">APIs</span>
+                        </h2>
+                        <p class="text-white/75 text-3xl-5 font-medium mt-8 mb-20 lg:text-[28px] md:text-xl lg:mb-12 sm:mt-6 sm:mb-10">
+                            The following list of well-known cryptocurrencies that niopay offers, apart from Bitcoin enables them to reach a
+                            diverse range of customers.
+                        </p>
+                        <div class="sm:mx-8">
+                            <button
+                                class="bg-secondary3 hover:bg-secondary3-light text-2xl-5 font-semibold rounded-4xl py-3 px-36 transition duration-150 ease-in-out xl:px-28 lg:px-20 lg:text-xl md:px-0 md:w-full sm:py-2 sm:px-0 sm:text-lg"
+                            >
+                                Contact for more
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-3 gap-x-3 py-24 md:grid-cols-2 lg:gap-x-4 sm:grid-cols-1 lg:py-16 md:py-12 sm:py-8">
+                    <div class="col-span-2 text-left mr-20 lg:mr-12 md:mr-0 md:col-span-1 sm:text-center sm:mb-8">
+                        <h2 class="">
+                            <span class="text-7xl font-extrabold xl:text-6xl lg:text-5xl sm:text-4xl">Based</span>
+                            <span class="mx-2 lg:mx-0.5"></span>
+                            <span class="text-primary text-7xl font-extrabold xl:text-6xl lg:text-5xl sm:text-4xl">Features</span>
+                        </h2>
+                        <p class="text-white/75 text-3xl-5 font-medium mt-8 mb-20 lg:text-[28px] md:text-xl lg:mb-12 sm:mt-6 sm:mb-10">
+                            Available as a decentralized web and as a mobile app, niopay equips you with secure login, token wallet, and
+                            token exchange-everything you need to manage your digital assets.
+                        </p>
+                        <div class="sm:mx-8">
+                            <button
+                                class="bg-primary hover:bg-primary-light text-2xl-5 font-semibold rounded-4xl py-3 px-36 transition duration-150 ease-in-out xl:px-28 lg:px-20 lg:text-xl md:px-0 md:w-full sm:py-2 sm:px-0 sm:text-lg"
+                            >
+                                Contact for more
+                            </button>
+                        </div>
+                    </div>
+                    <div class="grid gap-y-5 sm:gap-y-3">
+                        <div class="bg-white/[.075] p-4 flex items-center rounded-xl sm:p-3">
+                            <span class="material-icons-outlined text-3xl-1 mr-4 md:text-[28px] rotate-180">assignment_returned</span>
+                            <span class="text-2xl-5 font-medium flex-1 flex items-center max-h-18 h-18 lg:text-xl sm:h-10">Deposit</span>
+                        </div>
+                        <div class="bg-white/[.075] p-4 flex items-center rounded-xl sm:p-3">
+                            <span class="material-icons-outlined text-3xl-1 mr-4 md:text-[28px]">assignment_returned</span>
+                            <span class="text-2xl-5 font-medium flex-1 flex items-center max-h-18 h-18 lg:text-xl sm:h-10">Withdraw</span>
+                        </div>
+                        <div class="bg-white/[.075] p-4 flex items-center rounded-xl sm:p-3">
+                            <span class="material-icons-outlined text-3xl-1 mr-4 md:text-[28px]">account_balance_wallet</span>
+                            <span class="text-2xl-5 font-medium flex-1 flex items-center max-h-18 h-18 lg:text-xl sm:h-10"
+                                >P2P Trading</span
+                            >
+                        </div>
+                        <div class="bg-white/[.075] p-4 flex items-center rounded-xl sm:p-3">
+                            <span class="material-icons-outlined text-3xl-1 mr-4 md:text-[28px]">import_export</span>
+                            <span class="text-2xl-5 font-medium flex-1 flex items-center max-h-18 h-18 lg:text-xl sm:h-10">Transfer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-3 gap-x-3 py-24 md:grid-cols-2 lg:gap-x-4 sm:grid-cols-1 lg:py-16 md:py-12 sm:py-8">
+                    <div class="grid grid-cols-3 gap-6 sm:order-last sm:gap-3 sm:place-items-center">
+                        <img
+                            src="https://res.cloudinary.com/dwf04fosc/image/upload/v1668158747/nioPay/btc-coin_ka9sxn.png"
+                            alt="Bitcoin coin"
+                            class="object-contain w-full h-auto sm:w-20"
+                        />
+                        <img
+                            src="https://res.cloudinary.com/dwf04fosc/image/upload/v1668158748/nioPay/eth-coin_lnulp6.png"
+                            alt="Ethereum coin"
+                            class="object-contain w-full h-auto sm:w-20"
+                        />
+                        <img
+                            src="https://res.cloudinary.com/dwf04fosc/image/upload/v1668158747/nioPay/bnb-coin_kipvyf.png"
+                            alt="Binance coin"
+                            class="object-contain w-full h-auto sm:w-20"
+                        />
+                        <img
+                            src="https://res.cloudinary.com/dwf04fosc/image/upload/v1668158747/nioPay/busd-coin_maztsp.png"
+                            alt="busd coin"
+                            class="object-contain w-full h-auto sm:w-20"
+                        />
+                        <img
+                            src="https://res.cloudinary.com/dwf04fosc/image/upload/v1668158749/nioPay/usdt-coin_k5dynq.png"
+                            alt="Tether coin"
+                            class="object-contain w-full h-auto sm:w-20"
+                        />
+                        <img
+                            src="https://res.cloudinary.com/dwf04fosc/image/upload/v1668158749/nioPay/matic-icon_sxffpn.png"
+                            alt="Polygon coin"
+                            class="object-contain w-full h-auto sm:w-20"
+                        />
+                        <img
+                            src="https://res.cloudinary.com/dwf04fosc/image/upload/v1668158749/nioPay/trx-coin_cwtxrx.png"
+                            alt="Tron coin"
+                            class="object-contain w-full h-auto sm:w-20"
+                        />
+                        <img
+                            src="https://res.cloudinary.com/dwf04fosc/image/upload/v1668158749/nioPay/plus-coin_ytfrws.png"
+                            alt="Tether coin"
+                            class="object-contain w-full h-auto sm:w-20"
+                        />
+                    </div>
+                    <div class="col-span-2 text-right ml-20 lg:ml-12 md:ml-0 md:col-span-1 sm:text-center sm:mb-8">
+                        <h2 class="">
+                            <span class="text-7xl font-extrabold xl:text-6xl lg:text-5xl sm:text-4xl">Supported</span>
+                            <span class="mx-2 lg:mx-0.5"></span>
+                            <span class="text-secondary text-7xl font-extrabold xl:text-6xl lg:text-5xl sm:text-3xl md:hidden"
+                                >Cryptocurrencies</span
+                            >
+                            <span class="text-secondary font-extrabold hidden md:inline md:text-5xl sm:text-3xl">Crypto currencies</span>
+                        </h2>
+                        <p class="text-white/75 text-3xl-5 font-medium mt-8 mb-20 lg:text-[28px] md:text-xl lg:mb-12 sm:mt-6 sm:mb-10">
+                            The following list of well-known cryptocurrencies that niopay offers, apart from Bitcoin enables them to reach a
+                            diverse range of customers.
+                        </p>
+                        <div>
+                            <button
+                                class="bg-secondary hover:bg-secondary-light text-2xl-5 font-semibold rounded-4xl py-3 px-36 transition duration-150 ease-in-out xl:px-28 lg:px-20 lg:text-xl md:px-0 md:w-full sm:py-2 sm:px-0 sm:text-lg"
+                            >
+                                Contact for more
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-3 gap-x-3 py-24 md:grid-cols-2 lg:gap-x-4 sm:grid-cols-1 lg:py-16 md:py-12 sm:py-8">
+                    <div class="col-span-2 text-left mr-20 lg:mr-12 md:mr-0 md:col-span-1 sm:text-center sm:mb-8">
+                        <h2 class="">
+                            <span class="text-7xl font-extrabold xl:text-6xl lg:text-5xl sm:text-4xl">About</span>
+                            <span class="mx-2 lg:mx-0.5"></span>
+                            <span class="text-secondary2 text-7xl font-extrabold xl:text-6xl lg:text-5xl sm:text-4xl">What We Do</span>
+                        </h2>
+                        <p class="text-white/75 text-3xl-5 font-medium mt-8 mb-20 lg:text-[28px] md:text-xl lg:mb-12 sm:mt-6 sm:mb-10">
+                            niopay, we are a crypto payment gateway & wallet provider, we help online businesses to accept cryptocurrencies
+                            such as Bitcoin, Dash, Binance and so on.
+                        </p>
+                        <div>
+                            <button
+                                class="bg-secondary2 hover:bg-secondary2-light text-2xl-5 font-semibold rounded-4xl py-3 px-36 transition duration-150 ease-in-out xl:px-28 lg:px-20 lg:text-xl md:px-0 md:w-full sm:py-2 sm:px-0 sm:text-lg"
+                            >
+                                Contact for more
+                            </button>
+                        </div>
+                    </div>
+                    <div class="grid gap-y-5 sm:gap-y-3">
+                        <div class="bg-white/[.075] p-4 flex items-center rounded-xl sm:p-3">
+                            <span class="material-icons-outlined text-3xl-1 mr-4 md:text-[28px]">build</span>
+                            <span class="text-2xl-5 font-medium flex-1 flex items-center max-h-18 h-18 lg:text-xl sm:h-12"
+                                >Support of major cryptocurrencies</span
+                            >
+                        </div>
+                        <div class="bg-white/[.075] p-4 flex items-center rounded-xl sm:p-3">
+                            <span class="material-icons-outlined text-3xl-1 mr-4 md:text-[28px]">build</span>
+                            <span class="text-2xl-5 font-medium flex-1 flex items-center max-h-18 h-18 lg:text-xl sm:h-12"
+                                >No ID and no bank account required</span
+                            >
+                        </div>
+                        <div class="bg-white/[.075] p-4 flex items-center rounded-xl sm:p-3">
+                            <span class="material-icons-outlined text-3xl-1 mr-4 md:text-[28px]">build</span>
+                            <span class="text-2xl-5 font-medium flex-1 flex items-center max-h-18 h-18 lg:text-xl sm:h-12"
+                                >Free access to limited services</span
+                            >
+                        </div>
+                        <div class="bg-white/[.075] p-4 flex items-center rounded-xl sm:p-3">
+                            <span class="material-icons-outlined text-3xl-1 mr-4 md:text-[28px]">build</span>
+                            <span class="text-2xl-5 font-medium flex-1 flex items-center max-h-18 h-18 lg:text-xl sm:h-12"
+                                >Global, safe and anonymouse</span
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FRAME 3 -->
+            <div id="plugins-coins" class="bg-white relative">
+                <div class="bg-gradient-to-b from-primary to-white py-36 px-32 xl:px-28 lg:px-12 lg:py-20 md:px-6 sm:px-4 sm:py-16">
+                    <div class="title text-center mb-12 text-white relative z-20 lg:mb-12 md:mb-8">
+                        <h2 class="mb-6">
+                            <span class="text-white/75 text-7xl font-extrabold xl:text-6xl lg:text-5xl sm:text-4xl">Work On</span>
+                            <span class="mx-2 lg:mx-0.5"></span>
+                            <span class="text-7xl font-extrabold xl:text-6xl lg:text-5xl sm:text-4xl">Mobile App</span>
+                        </h2>
+                        <p class="text-white/75 text-2xl font-semibold leading-normal capitalize lg:text-xl">
+                            It just takes three simple steps…
+                        </p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="relative z-20">
+                            <img
+                                src="https://res.cloudinary.com/dwf04fosc/image/upload/v1668341160/nioPay/mobile-app_ctxrad.png"
+                                alt="mobile-app"
+                                class="w-auto object-cover"
+                            />
+                            <div class="absolute top-60 left__custom lg:hidden">
+                                <h4 class="text-7xl leading-normal font-extrabold text-white xl:text-5xl">11,315+</h4>
+                                <p class="text-[44px] leading-normal font-medium text-white whitespace-nowrap xl:text-[28px]">
+                                    BTC Processed
+                                </p>
+                            </div>
+                            <div class="absolute top-[40%] right__custom lg:hidden">
+                                <h4 class="text-7xl leading-normal font-extrabold text-white xl:text-5xl">48,979+</h4>
+                                <p class="text-[44px] leading-normal font-medium text-white whitespace-nowrap xl:text-[28px]">Users</p>
+                            </div>
+                            <div class="absolute bottom-[30%] left__custom lg:hidden">
+                                <h4 class="text-7xl leading-normal font-extrabold text-white xl:text-5xl">8.39M+</h4>
+                                <p class="text-[44px] leading-normal font-medium text-white whitespace-nowrap xl:text-[28px]">
+                                    Transactions
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 relative z-10 sm:flex-col sm:gap-3 sm:px-2">
+                            <img
+                                src="https://res.cloudinary.com/dwf04fosc/image/upload/v1668158747/nioPay/app-store_sww8nl.png"
+                                alt="download-app-store"
+                                class="sm:max-w-[250px] sm:w-full object-cover"
+                            />
+                            <img
+                                src="https://res.cloudinary.com/dwf04fosc/image/upload/v1668158747/nioPay/google-play_efrngh.png"
+                                alt="download-google-play"
+                                class="sm:max-w-[250px] sm:w-full object-cover"
+                            />
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-21 max-w-64 max-h-64 w-64 h-64 absolute top-20 left-32 z-0 lg:hidden">
+                        <div class="w-21 h-21 grid grid-cols-2">
+                            <span class="text-white leading-0.5 tracking-[-0.375em] flex justify-start">&#8226;</span>
+                            <span class="text-white leading-0.5 tracking-[-0.375em] flex justify-end">&#8226;</span>
+                            <span class="text-white leading-0.5 tracking-[-0.375em] flex justify-start items-end">&#8226;</span>
+                            <span class="text-white leading-0.5 tracking-[-0.375em] flex justify-end items-end">&#8226;</span>
+                        </div>
+                        <div class="w-21 h-21 grid grid-cols-2">
+                            <span class="text-white leading-0.5 tracking-[-0.375em] flex justify-start">&#8226;</span>
+                            <span class="text-white leading-0.5 tracking-[-0.375em] flex justify-end">&#8226;</span>
+                            <span class="text-white leading-0.5 tracking-[-0.375em] flex justify-start items-end">&#8226;</span>
+                            <span class="text-white leading-0.5 tracking-[-0.375em] flex justify-end items-end">&#8226;</span>
+                        </div>
+                        <div class="w-21 h-21 grid grid-cols-2">
+                            <span class="text-white leading-0.5 tracking-[-0.375em] flex justify-start">&#8226;</span>
+                            <span class="text-white leading-0.5 tracking-[-0.375em] flex justify-end">&#8226;</span>
+                            <span class="text-white leading-0.5 tracking-[-0.375em] flex justify-start items-end">&#8226;</span>
+                            <span class="text-white leading-0.5 tracking-[-0.375em] flex justify-end items-end">&#8226;</span>
+                        </div>
+                        <div class="w-21 h-21 grid grid-cols-2">
+                            <span class="text-white leading-0.5 tracking-[-0.375em] flex justify-start">&#8226;</span>
+                            <span class="text-white leading-0.5 tracking-[-0.375em] flex justify-end">&#8226;</span>
+                            <span class="text-white leading-0.5 tracking-[-0.375em] flex justify-start items-end">&#8226;</span>
+                            <span class="text-white leading-0.5 tracking-[-0.375em] flex justify-end items-end">&#8226;</span>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-21 max-w-64 max-h-64 w-64 h-64 absolute bottom-56 right-32 z-0 lg:hidden">
+                        <div class="w-21 h-21 grid grid-cols-2">
+                            <span class="text-primary leading-0.5 tracking-[-0.375em] flex justify-start">&#8226;</span>
+                            <span class="text-primary leading-0.5 tracking-[-0.375em] flex justify-end">&#8226;</span>
+                            <span class="text-primary leading-0.5 tracking-[-0.375em] flex justify-start items-end">&#8226;</span>
+                            <span class="text-primary leading-0.5 tracking-[-0.375em] flex justify-end items-end">&#8226;</span>
+                        </div>
+                        <div class="w-21 h-21 grid grid-cols-2">
+                            <span class="text-primary leading-0.5 tracking-[-0.375em] flex justify-start">&#8226;</span>
+                            <span class="text-primary leading-0.5 tracking-[-0.375em] flex justify-end">&#8226;</span>
+                            <span class="text-primary leading-0.5 tracking-[-0.375em] flex justify-start items-end">&#8226;</span>
+                            <span class="text-primary leading-0.5 tracking-[-0.375em] flex justify-end items-end">&#8226;</span>
+                        </div>
+                        <div class="w-21 h-21 grid grid-cols-2">
+                            <span class="text-primary leading-0.5 tracking-[-0.375em] flex justify-start">&#8226;</span>
+                            <span class="text-primary leading-0.5 tracking-[-0.375em] flex justify-end">&#8226;</span>
+                            <span class="text-primary leading-0.5 tracking-[-0.375em] flex justify-start items-end">&#8226;</span>
+                            <span class="text-primary leading-0.5 tracking-[-0.375em] flex justify-end items-end">&#8226;</span>
+                        </div>
+                        <div class="w-21 h-21 grid grid-cols-2">
+                            <span class="text-primary leading-0.5 tracking-[-0.375em] flex justify-start">&#8226;</span>
+                            <span class="text-primary leading-0.5 tracking-[-0.375em] flex justify-end">&#8226;</span>
+                            <span class="text-primary leading-0.5 tracking-[-0.375em] flex justify-start items-end">&#8226;</span>
+                            <span class="text-primary leading-0.5 tracking-[-0.375em] flex justify-end items-end">&#8226;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FRAME 4 -->
+            <div id="frame-4" class="bg-white px-32 xl:px-28 lg:px-12 md:px-6 sm:px-4">
+                <div class="title text-center mb-20 lg:mb-12 sm:mb-10">
+                    <h2 class="mb-6">
+                        <span class="text-black/50 text-7xl font-extrabold xl:text-6xl lg:text-5xl sm:text-4xl">How Does</span>
+                        <span class="mx-2 lg:mx-0.5"></span>
+                        <span class="text-7xl font-extrabold xl:text-6xl lg:text-5xl sm:text-4xl">It Work?</span>
+                    </h2>
+                    <p class="text-black/50 text-2xl font-semibold leading-normal capitalize lg:text-xl">
+                        It just takes three simple steps…
+                    </p>
+                </div>
+                <div class="grid grid-cols-3 gap-6 md:grid-cols-1">
+                    <div class="py-8 px-4 shadow-custom rounded-4xl">
+                        <span class="material-icons-outlined text-7xl-5 text-icon-2 mb-8 xl:text-6xl md:text-5xl xl:mb-6">person_add</span>
+                        <h3 class="text-3xl-5 font-semibold mb-6 xl:text-[28px] md:leading-none sm:text-[24px] xl:mb-4">Register</h3>
+                        <p class="text-2xl-5 xl:text-2xl sm:text-xl">
+                            Registration will not take more than 15 seconds. There are no KYC or mobile verification required. Just register
+                            and access all functionality.
+                        </p>
+                    </div>
+                    <div class="py-8 px-4 shadow-custom rounded-4xl">
+                        <span class="material-icons-outlined text-7xl-5 text-icon-3 mb-8 xl:text-6xl md:text-5xl xl:mb-6">build</span>
+                        <h3 class="text-3xl-5 font-semibold mb-6 xl:text-[28px] md:leading-none sm:text-[24px] xl:mb-4">Set Up</h3>
+                        <p class="text-2xl-5 xl:text-2xl sm:text-xl">
+                            Integration of Cryptocurrencies payment gateways is easier than developing a site. Integrate niopay to your site
+                            & bring your business into the future, securely and affordably.
+                        </p>
+                    </div>
+                    <div class="py-8 px-4 shadow-custom rounded-4xl">
+                        <span class="material-icons-outlined text-7xl-5 text-icon-4 mb-8 xl:text-6xl md:text-5xl xl:mb-6">done_all</span>
+                        <h3 class="text-3xl-5 font-semibold mb-6 xl:text-[28px] md:leading-none sm:text-[24px] xl:mb-4">Accept</h3>
+                        <p class="text-2xl-5 xl:text-2xl sm:text-xl">
+                            Accept cryptocurrency by integrating your REST API or you can use our ready made plugins. Customer can pay
+                            amount in form of cryptocurrencies to purchase products and services.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FRAME 5 -->
+            <div id="blogs" class="bg-white px-32 pt-48 xl:px-28 xl:pt-40 lg:px-12 lg:pt-20 md:px-6 sm:px-4 sm:pt-16">
+                <div class="title text-center mb-20 lg:mb-12 sm:mb-10">
+                    <h2 class="mb-6">
+                        <span class="text-black/50 text-7xl font-extrabold xl:text-6xl lg:text-5xl sm:text-4xl">Our</span>
+                        <span class="mx-2 lg:mx-0.5"></span>
+                        <span class="text-7xl font-extrabold xl:text-6xl lg:text-5xl sm:text-4xl">Blogs</span>
+                    </h2>
+                    <p class="text-black/50 text-2xl font-semibold leading-normal capitalize lg:text-xl">
+                        With our blogs, you can catch up with the up to date news about <br class="lg:hidden" />
+                        Blockchain technology
+                    </p>
+                </div>
+                <img
+                    src="https://res.cloudinary.com/dwf04fosc/image/upload/v1668359305/nioPay/blockchain_ihjz5d.png"
+                    alt="blockchain-technology"
+                    class="w-full object-contain"
+                />
+                <div id="news" class="my-12 lg:my-8 md:my-6 sm:my-4">
+                    <p class="text-black text-2xl-5 lg:text-lg sm:text-base">nioPay News</p>
+                    <h4 class="text-black text-7xl font-semibold my-7 xl:text-6xl lg:text-5xl lg:my-4 sm:text-3xl md:my-3">
+                        US Attorney Announces $3.4B Crypto Seizure Related to Silk Road
+                    </h4>
+                    <p class="text-black/50 text-2xl-5 font-semibold lg:text-lg sm:text-base">10 mins read</p>
+                </div>
+                <div id="news-list" class="flex flex-col gap-12 md:gap-6 lg:mt-12">
+                    <div class="flex gap-6 sm:flex-col sm:gap-2">
+                        <div>
+                            <img
+                                src="https://res.cloudinary.com/dwf04fosc/image/upload/v1668359439/nioPay/news-1_ardqd0.png"
+                                alt="news 1"
+                                class="max-w-[475px] w-full object-cover md:max-w-[300px]"
+                            />
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-black text-2xl-5 lg:text-lg sm:text-base">nioPay News</p>
+                            <h5
+                                class="text-black text-[44px] leading-none font-semibold my-6 xl:text-4xl lg:text-3xl sm:text-2xl md:my-3 sm:my-2"
+                            >
+                                Russia’s Central Bank Report Examines Crypto's Place in the Financial System
+                            </h5>
+                            <p class="text-black/50 text-2xl-5 font-semibold lg:text-lg sm:text-base">10 mins read</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 sm:flex-col sm:gap-2">
+                        <div>
+                            <img
+                                src="https://res.cloudinary.com/dwf04fosc/image/upload/v1668359440/nioPay/news-2_aqmkc2.png"
+                                alt="news 1"
+                                class="max-w-[475px] w-full object-cover md:max-w-[300px]"
+                            />
+                        </div>
+
+                        <div class="flex-1">
+                            <p class="text-black text-2xl-5 lg:text-lg sm:text-base">nioPay News</p>
+                            <h5
+                                class="text-black text-[44px] leading-none font-semibold my-6 xl:text-4xl lg:text-3xl sm:text-2xl md:my-3 sm:my-2"
+                            >
+                                Ethereum Apps Could Soon be Launching on Competitor Solana
+                            </h5>
+                            <p class="text-black/50 text-2xl-5 font-semibold lg:text-lg sm:text-base">10 mins read</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 sm:flex-col sm:gap-2">
+                        <div>
+                            <img
+                                src="https://res.cloudinary.com/dwf04fosc/image/upload/v1668359442/nioPay/news-3_f7hnkf.png"
+                                alt="news 1"
+                                class="max-w-[475px] w-full object-cover md:max-w-[300px]"
+                            />
+                        </div>
+
+                        <div class="flex-1">
+                            <p class="text-black text-2xl-5 lg:text-lg sm:text-base">nioPay News</p>
+                            <h5
+                                class="text-black text-[44px] leading-none font-semibold my-6 xl:text-4xl lg:text-3xl sm:text-2xl md:my-3 sm:my-2"
+                            >
+                                Nigeria’s Presidential Candidate Adebayo to Create 30 Million Jobs Using Crypto
+                            </h5>
+                            <p class="text-black/50 text-2xl-5 font-semibold lg:text-lg sm:text-base">10 mins read</p>
+                        </div>
+                    </div>
+                    <div class="text-right sm:mx-8">
+                        <button
+                            class="text-2xl-5 font-semibold py-3 px-28 rounded-4xl border-2 border-black/50 bg-white hover:bg-primary-light hover:text-white transition duration-150 lg:px-20 lg:text-xl sm:w-full sm:py-2 sm:px-0"
+                        >
+                            Read More
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FRAME 6 -->
+            <div id="frame-6" class="px-32 py-28 xl:px-28 lg:px-0 lg:py-16">
+                <div class="frame-6__background py-16 text-center rounded-[64px] md:rounded-4xl sm:py-10">
+                    <h4 class="text-[52px] leading-none font-semibold text-white xl:text-5xl lg:text-4xl sm:text-3xl">
+                        Grow with us <br />
+                        Begin your crypto journey today
+                    </h4>
+                    <div class="flex justify-center gap-8 text-white mt-8 xl:px-4 sm:flex-col sm:gap-6">
+                        <div class="py-8 px-4 shadow-custom rounded-4xl max-w-[275px] w-full text-left sm:max-w-none sm:py-6">
+                            <span class="material-icons-outlined text-7xl mb-6 xl:text-6xl md:text-5xl">group</span>
+                            <h3 class="text-[32px] leading-none font-semibold mb-4 xl:text-[28px] sm:text-[24px]">Community</h3>
+                            <p class="text-2xl-5 xl:text-2xl sm:text-xl">Niopay is here for you. Come and talk with us</p>
+                        </div>
+                        <div class="py-8 px-4 shadow-custom rounded-4xl max-w-[275px] w-full text-left sm:max-w-none sm:py-6">
+                            <span class="material-icons-outlined text-7xl mb-6 xl:text-6xl md:text-5xl">school</span>
+                            <h3 class="text-[32px] leading-none font-semibold mb-4 xl:text-[28px] sm:text-[24px]">Learn</h3>
+                            <p class="text-2xl-5 xl:text-2xl sm:text-xl">Trade and invest better by learning about crypto</p>
+                        </div>
+                        <div class="py-8 px-4 shadow-custom rounded-4xl max-w-[275px] w-full text-left sm:max-w-none sm:py-6">
+                            <span class="material-icons-outlined text-7xl mb-6 xl:text-6xl md:text-5xl">thumb_up_alt</span>
+                            <h3 class="text-[32px] leading-none font-semibold mb-4 xl:text-[28px] sm:text-[24px]">Partnership</h3>
+                            <p class="text-2xl-5 xl:text-2xl sm:text-xl">Contact us for partnership opportunities</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FOOTER -->
+            <div id="footer" class="text-white px-32 xl:px-28 lg:px-0">
+                <div class="bg-black py-28 px-20 rounded-t-[4rem] xl:px-16 lg:px-12 lg:py-24 sm:px-4 sm:py-16 md:rounded-t-4xl">
+                    <div class="mb-4">
+                        <img
+                            src="https://res.cloudinary.com/dwf04fosc/image/upload/v1668392904/nioPay/logo-footer_kmray6.png"
+                            alt="logo-footer"
+                            class=""
+                        />
+                    </div>
+                    <div class="flex xl:justify-between sm:flex-col">
+                        <div class="w-[70%] sm:w-full">
+                            <p class="text-2xl-5 text-white/50 font-medium max-w-[444px] sm:max-w-full lg:text-lg">
+                                Niopay is a cryptocurrency payment gateway, which lets merchants receive crypto payments. Its main intention
+                                is to process errorless, fast and secure crypto transactions.
+                            </p>
+                            <div id="send-mail" class="mt-16 lg:mt-10">
+                                <h4 class="text-[52px] leading-none font-semibold lg:text-4xl sm:text-3xl">Subscribe Newsletter</h4>
+                                <p class="text-2xl-5 text-white/50 font-medium mt-4 mb-8 lg:text-lg">
+                                    Get niopay's latest updates on your mail
+                                </p>
+                                <div class="max-w-[500px] w-full relative top-0 sm:max-w-full">
+                                    <input
+                                        type="text"
+                                        placeholder="Your email"
+                                        class="absolute z-2 w-full text-2xl-5 text-black font-semibold py-[12px] pl-6 pr-48 rounded-4xl border-2 border-black/50 outline-none lg:text-lg lg:py-2 lg:pr-40 lg:pl-4 sm:pr-24"
+                                    />
+                                    <button
+                                        class="bg-primary hover:bg-primary-light font-semibold rounded-4xl py-3.5 px-12 absolute top-0 right-0 z-4 transition duration-150 ease-in-out lg:py-2.5 sm:px-8"
+                                    >
+                                        <span class="text-2xl-5 lg:text-lg sm:hidden">Submit</span>
+                                        <span class="material-icons-outlined hidden sm:inline-block sm:text-lg">send</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <ul
+                            class="w=[30%] lg:text-right sm:text-left sm:w-full sm:mt-20 sm:grid sm:grid-cols-2 sm:place-items-start sm:gap-4"
+                        >
+                            <li>
+                                <a href="" class="text-2xl-5 lg:text-lg font-semibold">Home</a>
+                            </li>
+                            <li class="mt-6 sm:mt-0">
+                                <a
+                                    href="api.html"
+                                    class="text-2xl-5 lg:text-lg font-semibold text-white/50 hover:text-white transition duration-150"
+                                    >APIs</a
+                                >
+                            </li>
+                            <li class="mt-6 sm:mt-0">
+                                <a
+                                    href="api.html"
+                                    class="text-2xl-5 lg:text-lg font-semibold text-white/50 hover:text-white transition duration-150"
+                                    >Fees</a
+                                >
+                            </li>
+                            <li class="mt-6 sm:mt-0">
+                                <a
+                                    href=""
+                                    class="text-2xl-5 lg:text-lg font-semibold text-white/50 hover:text-white transition duration-150"
+                                    >Plugins & Coins</a
+                                >
+                            </li>
+                            <li class="mt-6 sm:mt-0">
+                                <a
+                                    href="blog.html"
+                                    class="text-2xl-5 lg:text-lg font-semibold text-white/50 hover:text-white transition duration-150"
+                                    >Blogs</a
+                                >
+                            </li>
+                            <li class="mt-6 sm:mt-0">
+                                <a
+                                    href="#footer"
+                                    class="text-2xl-5 lg:text-lg font-semibold text-white/50 hover:text-white transition duration-150"
+                                    >Contact</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button
+            onclick="topFunction()"
+            id="backTop"
+            title="Go to top"
+            class="hidden fixed bottom-8 right-8 z-50 border-none outline-none bg-primary text-white cursor-pointer p-3 rounded-xl text-[18px] leading-none hover:bg-primary-light transition duration-150 ease-in-out sm:bottom-4 sm:right-4"
+        >
+            <span class="material-icons-outlined">arrow_upward</span>
+        </button>
+
+        <script>
+            let mybutton = document.getElementById('backTop');
+            window.onscroll = function () {
+                scrollFunction();
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > screen.height || document.documentElement.scrollTop > screen.height) {
+                    mybutton.style.display = 'block';
+                } else {
+                    mybutton.style.display = 'none';
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+        </script>
+        <script>
+            const menu = document.getElementById('sidebar');
+            const openNav = () => {
+                menu.classList.remove('md:ml-[767px]');
+                menu.classList.remove('md:opacity-0');
+                menu.classList.add('md:ml-0');
+                menu.classList.add('md:opacity-100');
+            };
+            const closeNav = () => {
+                menu.classList.remove('md:ml-0');
+                menu.classList.remove('md:opacity-100');
+                menu.classList.add('md:ml-[767px]');
+                menu.classList.add('md:opacity-0');
+            };
+        </script>
+    </body>
+</html>
