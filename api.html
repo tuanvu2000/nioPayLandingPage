@@ -102,6 +102,19 @@
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
+            .custom__bg {
+                background-image: linear-gradient(to right, #623ff0, #e74ef4, #fdb242);
+                border-radius: 32px;
+            }
+            .custom__bg-button {
+                background-clip: padding-box;
+                background-color: white;
+                margin: 1px;
+                border-radius: inherit;
+            }
+            .custom__hover:hover {
+                opacity: 0.15;
+            }
             .custom__screen {
                 width: 100%;
                 margin-left: auto;
@@ -487,7 +500,7 @@
                             Get Started
                         </button>
                     </div>
-                    <div data-aos="fade-up" data-aos-delay="100" class="p-7 shadow-custom rounded-4xl flex flex-col md:p-4">
+                    <div data-aos="fade-up" data-aos-delay="100" class="custom__gradient-border p-7 shadow-custom rounded-4xl flex flex-col md:p-4">
                         <div class="bg-white flex gap-x-5 mb-10 lg:mb-8 sm:mb-4 sm:gap-x-3">
                             <div>
                                 <div class="p-5 custom__gradient rounded-2xl lg:p-4">
@@ -563,11 +576,13 @@
                                 <span class="flex-1 ml-4 text-lg xl:text-base sm:ml-3">Unlimited address</span>
                             </li>
                         </ul>
-                        <div class="custom__gradient-border mb-6 md:mb-4 mt-auto">
-                            <div class="custom__gradient-text">
-                                <button class="py-4 font-semibold w-full rounded-[2rem] transition duration-200 lg:py-3">
-                                    Get Started
-                                </button>
+                        <div class="custom__bg">
+                            <div class="bg-clip-padding border-2 border-transparent bg-white rounded-[32px] hover:opacity-75">
+                                <div class="custom__gradient-text">
+                                    <button class="py-4 font-semibold w-full rounded-[2rem] transition duration-200 lg:py-3">
+                                        Get Started
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -733,7 +748,7 @@
                 menu.classList.add('md:opacity-0');
             };
         </script>
-        
+
         <!-- Animation Scroll -->
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
