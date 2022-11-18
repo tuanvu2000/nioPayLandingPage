@@ -13,238 +13,10 @@
             href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
             rel="stylesheet"
         />
+        <link rel="stylesheet" href="styles.css" />
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <script src="https://cdn.tailwindcss.com"></script>
-        <script>
-            tailwind.config = {
-                theme: {
-                    colors: {
-                        black: '#1E1E1E',
-                        white: '#FFFFFF'
-                    },
-                    extend: {
-                        fontFamily: {
-                            sans: ['Inter', 'sans-serfi'],
-                            header: ['Syne', 'sans-serfi']
-                        },
-                        fontSize: {
-                            logo: ['2.75rem', 1],
-                            '2xl-5': ['1.5rem', '2.25rem'],
-                            '2xl-15': ['1.5rem', '4.5rem'],
-                            '3xl-1': ['2rem', 1],
-                            '3xl-5': ['2rem', '3rem'],
-                            '7xl-5': ['5.25rem', 1]
-                        },
-                        colors: {
-                            black: '#1E1E1E',
-                            primary: '#623FF0',
-                            secondary: '#FDB242',
-                            secondary2: '#E74EF4',
-                            secondary3: '#FF2C78',
-                            'primary-light': '#999DFD',
-                            'secondary-light': '#FFF389',
-                            'secondary2-light': '#EE87F7',
-                            'secondary3-light': '#FF80AE',
-                            success: '#4BDB4B',
-                            error: '#FF4D4D',
-                            'icon-1': '#623FF0',
-                            'icon-2': '#E74EF4',
-                            'icon-3': '#639AFF',
-                            'icon-4': '#4BDB4B',
-                            'icon-5': '#B643EC',
-                            'icon-6': '#F8BA43'
-                        },
-                        borderRadius: {
-                            '4xl': '2rem'
-                        },
-                        boxShadow: {
-                            custom: '0px 4px 8px rgba(30, 30, 30, 0.1)',
-                            'custom-hover': '0px 4px 8px rgba(30, 30, 30, 0.3)'
-                        },
-                        minWidth: {
-                            40: '40px'
-                        },
-                        width: {
-                            21: '5.25rem'
-                        },
-                        height: {
-                            18: '4.5rem',
-                            21: '5.25rem'
-                        },
-                        maxHeight: {
-                            18: '4.5rem'
-                        },
-                        lineHeight: {
-                            0.5: '0.125rem',
-                            18: '4.5rem'
-                        },
-                        gap: {
-                            21: '5.25rem'
-                        }
-                    },
-                    screens: {
-                        '2xl': { max: '1535px' },
-                        xl: { max: '1279px' },
-                        lg: { max: '1023px' },
-                        md: { max: '767px' },
-                        sm: { max: '639px' }
-                    }
-                }
-            };
-        </script>
-
-        <style>
-            * {
-                box-sizing: border-box;
-                color: '#1E1E1E';
-                line-height: 1.5;
-                font-size: 16px;
-                font-weight: normal;
-            }
-            html {
-                scroll-behavior: smooth;
-            }
-            #fill-text {
-                background: url(https://res.cloudinary.com/dwf04fosc/image/upload/v1668162943/nioPay/fill-text_zp0azc.png);
-                background-size: cover;
-                background-position: center;
-                color: transparent;
-                background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                padding: 0;
-            }
-            #information {
-                max-width: 1000px;
-                width: 100%;
-            }
-            #table-coin {
-                position: relative;
-                background-clip: padding-box;
-                border: 1px solid transparent;
-                background-color: #fff;
-                border-radius: 32px;
-            }
-            #table-coin:before {
-                content: '';
-                position: absolute;
-                inset: 0;
-                z-index: -1;
-                margin: -1px;
-                background-image: linear-gradient(102.46deg, #fdb242 -3.27%, #e74ef4 52.66%, #623ff0 105.2%);
-                border-radius: inherit;
-            }
-            #table-coin table {
-                max-width: 1000px;
-                width: 100%;
-            }
-            .icon__right {
-                width: 24px;
-                line-height: 24px;
-                text-align: center;
-                font-size: 18px;
-                font-weight: 700;
-                color: rgba(30, 30, 30, 0.25);
-                background-color: rgba(30, 30, 30, 0.05);
-                border-radius: 4px;
-            }
-            #rectangle-frame-2 {
-                position: absolute;
-                left: 0;
-                bottom: 100%;
-                max-width: 600px;
-                width: 100%;
-                height: 72px;
-                background-color: inherit;
-            }
-            #rectangle-frame-2:before {
-                content: '';
-                position: absolute;
-                right: 0;
-                border-right: 136px solid white;
-                border-bottom: 72px solid transparent;
-            }
-            .left__custom {
-                left: calc(100% - 50px);
-            }
-            .right__custom {
-                right: calc(100% - 30px);
-            }
-            .frame-6__background {
-                background: linear-gradient(111.41deg, #623ff0 -0.63%, #e74ef4 52.21%, #fdb242 107.9%);
-            }
-
-            .custom__screen {
-                width: 100%;
-                margin-left: auto;
-                margin-right: auto;
-                padding-left: 16px;
-                padding-right: 16px;
-            }
-            @media (min-width: 1536px) {
-                .custom__screen {
-                    max-width: 1440px;
-                    padding-left: 24px;
-                    padding-right: 24px;
-                }
-            }
-            @media (min-width: 1280px) and (max-width: 1535px) {
-                .custom__screen {
-                    max-width: 1200px;
-                    padding-left: 15px;
-                    padding-right: 15px;
-                }
-            }
-            @media (min-width: 1024px) and (max-width: 1279px) {
-                .custom__screen {
-                    max-width: 980px;
-                }
-                .left__custom {
-                    left: calc(100% - 70px);
-                }
-                .right__custom {
-                    right: calc(100% - 40px);
-                }
-            }
-            @media (min-width: 768px) and (max-width: 1023px) {
-                .custom__screen {
-                    max-width: 740px;
-                }
-                .left__custom {
-                    left: calc(100% - 40px);
-                }
-                .right__custom {
-                    right: calc(100% - 20px);
-                }
-                #rectangle-frame-2 {
-                    max-width: 480px;
-                    height: 56px;
-                }
-                #rectangle-frame-2:before {
-                    border-bottom: 56px solid transparent;
-                }
-            }
-            @media (min-width: 640px) and (max-width: 767px) {
-                .custom__screen {
-                    max-width: 600px;
-                }
-            }
-            @media (max-width: 639px) {
-                .custom__screen {
-                    max-width: 600px;
-                }
-            }
-            @media (max-width: 1023px) {
-                #rectangle-frame-2 {
-                    max-width: 375px;
-                    height: 40px;
-                }
-                #rectangle-frame-2:before {
-                    border-bottom: 40px solid transparent;
-                    border-right: 112px solid white;
-                }
-            }
-        </style>
+        <script src="./customStyle.js"></script>
     </head>
     <body>
         <div id="container" class="container mx-auto w-full">
@@ -1416,6 +1188,8 @@
         </button>
 
         <script>
+            //
+            // Animation butotn backTop
             let mybutton = document.getElementById('backTop');
             window.onscroll = function () {
                 scrollFunction();
@@ -1434,8 +1208,9 @@
                 document.body.scrollTop = 0; // For Safari
                 document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
             }
-        </script>
-        <script>
+
+            //
+            // Animation for navbar with devices tablet, mobile
             const menu = document.getElementById('sidebar');
             const openNav = () => {
                 menu.classList.remove('md:ml-[767px]');
