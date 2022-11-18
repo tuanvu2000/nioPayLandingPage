@@ -216,6 +216,13 @@
                 .right__custom {
                     right: calc(100% - 20px);
                 }
+                #rectangle-frame-2 {
+                    max-width: 480px;
+                    height: 56px;
+                }
+                #rectangle-frame-2:before {
+                    border-bottom: 56px solid transparent;
+                }
             }
             @media (min-width: 640px) and (max-width: 767px) {
                 .custom__screen {
@@ -225,6 +232,16 @@
             @media (max-width: 639px) {
                 .custom__screen {
                     max-width: 600px;
+                }
+            }
+            @media (max-width: 1023px) {
+                #rectangle-frame-2 {
+                    max-width: 375px;
+                    height: 40px;
+                }
+                #rectangle-frame-2:before {
+                    border-bottom: 40px solid transparent;
+                    border-right: 112px solid white;
                 }
             }
         </style>
@@ -768,7 +785,7 @@
                                 <span class="font-medium flex items-center h-12 sm:h-10"> Run experiments </span>
                             </div>
                         </div>
-                        <div class="col-span-2 text-right ml-20 xl:ml-12 lg:ml-8 md:ml-4 md:col-span-1 sm:text-center sm:mb-8">
+                        <div class="col-span-2 text-right ml-20 xl:ml-12 lg:ml-8 md:ml-4 md:col-span-1 sm:text-center sm:mb-8 sm:ml-0">
                             <h2>
                                 <span class="text-5xl font-extrabold xl:text-4xl md:text-3xl sm:text-2xl">Provided</span>
                                 <span class="mx-[3px] sm:mx-[1px]"></span>
@@ -781,7 +798,7 @@
                                 The following list of well-known cryptocurrencies that nioPay offers, apart from Bitcoin enables them to
                                 reach a diverse range of customers.
                             </p>
-                            <div class="sm:mx-8">
+                            <div class="sm:mx-4">
                                 <button
                                     class="bg-secondary3 hover:bg-secondary3-light max-w-[450px] w-full font-semibold rounded-4xl py-3 transition duration-150 ease-in-out sm:max-w-[320px] sm:py-2 sm:px-0"
                                 >
@@ -796,7 +813,7 @@
                         data-aos-delay="100"
                         class="grid grid-cols-3 gap-x-3 py-20 md:grid-cols-2 lg:gap-x-0 lg:py-16 md:py-12 sm:grid-cols-1 sm:py-10"
                     >
-                        <div class="col-span-2 text-left mr-20 xl:mr-12 lg:mr-8 md:mr-4 md:col-span-1 sm:text-center sm:mb-8">
+                        <div class="col-span-2 text-left mr-20 xl:mr-12 lg:mr-8 md:mr-4 md:col-span-1 sm:text-center sm:mb-8 sm:mr-0">
                             <h2>
                                 <span class="text-5xl font-extrabold xl:text-4xl md:text-3xl sm:text-2xl">Based</span>
                                 <span class="mx-[3px] sm:mx-[1px]"></span>
@@ -808,7 +825,7 @@
                                 Available as a decentralized web and as a mobile app, nioPay equips you with secure login, token wallet, and
                                 token exchange-everything you need to manage your digital assets.
                             </p>
-                            <div class="sm:mx-8">
+                            <div class="sm:mx-4">
                                 <button
                                     class="bg-primary hover:bg-primary-light max-w-[450px] w-full font-semibold rounded-4xl py-3 transition duration-150 ease-in-out sm:max-w-[320px] sm:py-2 sm:px-0"
                                 >
@@ -890,15 +907,12 @@
                                 class="object-contain w-full h-auto sm:w-20"
                             />
                         </div>
-                        <div class="col-span-2 text-right ml-20 xl:ml-12 lg:ml-8 md:ml-4 md:col-span-1 sm:text-center sm:mb-8">
+                        <div class="col-span-2 text-right ml-20 xl:ml-12 lg:ml-8 md:ml-4 md:col-span-1 sm:text-center sm:mb-8 sm:ml-0">
                             <h2>
                                 <span class="text-5xl font-extrabold xl:text-4xl md:text-3xl sm:text-2xl">Supported</span>
                                 <span class="mx-[3px] sm:mx-[1px]"></span>
-                                <span class="text-secondary text-6xl font-extrabold xl:text-[54px] lg:text-4xl sm:text-3xl md:hidden">
+                                <span class="text-secondary text-5xl font-extrabold xl:text-4xl md:text-3xl sm:text-2xl">
                                     Cryptocurrencies
-                                </span>
-                                <span class="text-secondary font-extrabold hidden md:inline md:text-4xl sm:text-3xl">
-                                    Crypto currencies
                                 </span>
                             </h2>
                             <p
@@ -907,7 +921,7 @@
                                 The following list of well-known cryptocurrencies that nioPay offers, apart from Bitcoin enables them to
                                 reach a diverse range of customers.
                             </p>
-                            <div class="sm:mx-8">
+                            <div class="sm:mx-4">
                                 <button
                                     class="bg-secondary hover:bg-secondary-light max-w-[450px] w-full font-semibold rounded-4xl py-3 transition duration-150 ease-in-out sm:max-w-[320px] sm:py-2 sm:px-0"
                                 >
@@ -921,7 +935,7 @@
                         data-aos-delay="200"
                         class="grid grid-cols-3 gap-x-3 py-20 md:grid-cols-2 lg:gap-x-0 lg:py-16 md:py-12 sm:grid-cols-1 sm:py-10"
                     >
-                        <div class="col-span-2 text-left mr-20 xl:mr-12 lg:mr-8 md:mr-4 md:col-span-1 sm:text-center sm:mb-8">
+                        <div class="col-span-2 text-left mr-20 xl:mr-12 lg:mr-8 md:mr-4 md:col-span-1 sm:text-center sm:mb-8 sm:mr-0">
                             <h2>
                                 <span class="text-5xl font-extrabold xl:text-4xl md:text-3xl sm:text-2xl">About</span>
                                 <span class="mx-[3px] sm:mx-[1px]"></span>
@@ -935,7 +949,7 @@
                                 nioPay, we are a crypto payment gateway & wallet provider, we help online businesses to accept
                                 cryptocurrencies such as Bitcoin, Dash, Binance and so on.
                             </p>
-                            <div class="sm:mx-8">
+                            <div class="sm:mx-4">
                                 <button
                                     class="bg-secondary2 hover:bg-secondary2-light max-w-[450px] w-full font-semibold rounded-4xl py-3 transition duration-150 ease-in-out sm:max-w-[320px] sm:py-2 sm:px-0"
                                 >
@@ -1141,7 +1155,7 @@
             </div>
 
             <!-- FRAME 5 -->
-            <div data-aos="fade-up" id="blogs" class="custom__screen bg-white pt-48 xl:pt-40 lg:pt-20 sm:pt-16">
+            <div data-aos="fade-up" id="blogs" class="custom__screen bg-white pt-36 xl:pt-32 lg:pt-20 sm:pt-16">
                 <div class="title text-center mb-16 lg:mb-12 sm:mb-10">
                     <h2 class="mb-4">
                         <span class="text-black/50 text-5xl font-extrabold xl:text-4xl sm:text-2xl">Our</span>
@@ -1240,7 +1254,7 @@
                             <div
                                 data-aos="fade-right"
                                 data-aos-delay="50"
-                                class="py-8 px-4 shadow-custom rounded-4xl max-w-[275px] w-full text-left md:max-w-none md:py-6 hover:shadow-custom-hover"
+                                class="py-8 px-4 shadow-custom rounded-4xl max-w-[275px] w-full text-left md:max-w-none md:py-5 hover:shadow-custom-hover"
                             >
                                 <div class="flex flex-col md:flex-row md:items-center md:gap-x-4 md:mb-2">
                                     <span class="material-icons-outlined text-5xl mb-2 md:mb-0 sm:text-4xl">group</span>
