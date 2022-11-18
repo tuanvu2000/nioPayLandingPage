@@ -13,6 +13,7 @@
             href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
             rel="stylesheet"
         />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <script src="https://cdn.tailwindcss.com"></script>
         <script>
             tailwind.config = {
@@ -358,7 +359,7 @@
             <!-- FOOTER -->
             <div data-aos="fade-up" id="footer" class="text-white">
                 <div
-                    class="max-w-[75rem] xl:max-w-full mx-auto bg-black pt-20 py-24 px-20 rounded-t-[4rem] xl:px-0 lg:pt-12 lg:pb-16 md:pt-10 sm:py-10 md:rounded-t-4xl"
+                    class="max-w-[90rem] 2xl:max-w-[75rem] xl:max-w-full mx-auto bg-black pt-20 py-24 px-20 rounded-t-[4rem] xl:px-0 lg:pt-12 lg:pb-16 md:pt-10 sm:py-10 md:rounded-t-4xl"
                 >
                     <div class="custom__screen">
                         <div class="mb-3">
@@ -469,6 +470,14 @@
                 menu.classList.add('md:ml-[767px]');
                 menu.classList.add('md:opacity-0');
             };
+        </script>
+
+        <!-- Animation Scroll -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                once: true
+            });
         </script>
     </body>
 </html>
